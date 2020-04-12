@@ -1,17 +1,9 @@
 import React from 'react';
-import GroupBlock from '../Components/GroupBlock';
-import TransactionBlock from '../Components/TransactionBlock';
-const Layout = () => {
+const Layout = (props) => {
   return (
     <>
       <header>this is the header</header>
-      <main>
-        <GroupBlock />
-        <GroupBlock />
-        <GroupBlock />
-        <GroupBlock />
-        <TransactionBlock />
-      </main>
+      <main>{props.children}</main>
       <footer> this is the footer</footer>
     </>
   );

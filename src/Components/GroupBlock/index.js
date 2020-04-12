@@ -2,7 +2,9 @@ import React from 'react'
 import GroupBlockItem from './GroupBlockItem/'
 
 const GroupBlock = (props) => {
-    const { title } = props
+  console.log('props: ', props);
+    const {title, groupItems} = props;
+    console.log('title:', title, 'groupItems: ', groupItems)
     const itemArr = [{ id: 0, title: 'Council Tax', planned: 146, spent: 0, remaining: 146 }, { id: 1, title: 'Electricity', planned: 56, spent: 56, remaining: 0 },]
     return (
         <>
