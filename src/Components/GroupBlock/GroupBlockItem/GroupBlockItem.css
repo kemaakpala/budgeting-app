@@ -1,0 +1,14 @@
+.itemRow {
+  display: flex;
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+.itemRow li {
+  padding: 8px;
+}
+
+.itemRow > li:first-child {
+  padding-left: 0;
+}

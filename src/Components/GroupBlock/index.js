@@ -2,24 +2,32 @@ import React from 'react'
 import GroupBlockItem from './GroupBlockItem/'
 
 const GroupBlock = (props) => {
-  console.log('props: ', props);
-    const {title, groupItems} = props;
-    console.log('title:', title, 'groupItems: ', groupItems)
-    const itemArr = [{ id: 0, title: 'Council Tax', planned: 146, spent: 0, remaining: 146 }, { id: 1, title: 'Electricity', planned: 56, spent: 56, remaining: 0 },]
-    return (
+  const groupObj = props;
+
+  const renderItems = () => {
+    const groupArr = Object.entries(groupObj);
+
+    return groupArr.length ? groupArr.map(([key, value]) => {
+      // Pretty straightforward - use key for the key and value for the value.
+      // Just to clarify: unlike object destructuring, the parameter names don't matter here.
+      return (
         <>
-            <div className="group-block">
-                <h2 className="group-title">{title}</h2>
-                <div className="group-block-body">
-                    <ul>
-                        {itemArr.map((item) => {
-                            return <GroupBlockItem key={item.id} title={item.title} planned={item.planned} spent={item.spent} remaining={item.remaining} />
-                        })}
-                    </ul>
-                </div>
-            </div>
+          <div className="group-block">{value.title}</div>
+          <div className="group-block-body">
+            <ul>
+              <li>
+
+                {value.groupItems.map((item) => {
+                  return <GroupBlockItem key={item.id} title={item.title} planned={item.planned} spent={item.spent} remaining={item.remaining} />
+                })}
+              </li>
+            </ul>
+          </div>
         </>
-    )
+      )
+    }) : null
+  }
+  return renderItems()
 }
 
 export default GroupBlock;

@@ -3,150 +3,146 @@
     {
       "jan": [
         {
-          "group": [
+          "id": 0,
+          "title": "Housing jan",
+          "date": "",
+          "key": "housing",
+          "groupItems": [
             {
               "id": 0,
-              "title": "Housing",
-              "date": "",
-              "key": "housing",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Mortgage/Rent",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "mortRent"
-                },
-                {
-                  "id": 1,
-                  "title": "Gas",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "gas"
-                },
-                {
-                  "id": 2,
-                  "title": "Electricity",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "elec"
-                },
-                {
-                  "id": 3,
-                  "title": "Council Tax",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "ctax"
-                }
-              ]
+              "title": "Mortgage/Rent jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "mortRent"
             },
             {
               "id": 1,
-              "title": "Transportation",
-              "date": "",
-              "key": "transport",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Fuel",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "TFL",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                },
-                {
-                  "id": 2,
-                  "title": "Parking",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "parking"
-                }
-              ]
+              "title": "Gas jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "gas"
             },
             {
               "id": 2,
-              "title": "Lifestyle",
-              "date": "",
-              "key": "lifestyle",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Entertainment",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "Miscellaneous",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                }
-              ]
+              "title": "Electricity jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "elec"
             },
             {
               "id": 3,
-              "title": "Debt",
-              "date": "",
-              "key": "debt",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Entertainment",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "Miscellaneous",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                }
-              ]
+              "title": "Council Tax jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "ctax"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Transportation jan",
+          "date": "",
+          "key": "transport",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Fuel jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
             },
             {
-              "id": 3,
-              "title": "Insurance",
-              "date": "",
-              "key": "debt",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Health Insurance",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "Homeowner/Renter",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                }
-              ]
+              "id": 1,
+              "title": "TFL jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
+            },
+            {
+              "id": 2,
+              "title": "Parking jan",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "parking"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Lifestyle",
+          "date": "",
+          "key": "lifestyle",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Entertainment",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
+            },
+            {
+              "id": 1,
+              "title": "Miscellaneous",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Debt",
+          "date": "",
+          "key": "debt",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Entertainment",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
+            },
+            {
+              "id": 1,
+              "title": "Miscellaneous",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Insurance",
+          "date": "",
+          "key": "debt",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Health Insurance",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
+            },
+            {
+              "id": 1,
+              "title": "Homeowner/Renter",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
             }
           ]
         }
@@ -155,204 +151,180 @@
     {
       "feb": [
         {
-          "group": [
+          "id": 0,
+          "title": "Housing feb",
+          "date": "",
+          "key": "housing",
+          "groupItems": [
             {
               "id": 0,
-              "title": "Housing",
-              "date": "",
-              "key": "housing",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Mortgage/Rent",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "mortRent"
-                },
-                {
-                  "id": 1,
-                  "title": "Gas",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "gas"
-                },
-                {
-                  "id": 2,
-                  "title": "Electricity",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "elec"
-                },
-                {
-                  "id": 3,
-                  "title": "Council Tax",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "ctax"
-                }
-              ]
+              "title": "Mortgage/Rent feb",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "mortRent"
             },
             {
               "id": 1,
-              "title": "Transportation",
-              "date": "",
-              "key": "transport",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Fuel",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "TFL",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                },
-                {
-                  "id": 2,
-                  "title": "Parking",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "parking"
-                }
-              ]
+              "title": "Gas feb",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "gas"
             },
             {
               "id": 2,
-              "title": "Lifestyle",
-              "date": "",
-              "key": "lifestyle",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Entertainment",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "Miscellaneous",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                }
-              ]
+              "title": "Electricity feb",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "elec"
             },
             {
               "id": 3,
-              "title": "Debt",
-              "date": "",
-              "key": "debt",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Entertainment",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "Miscellaneous",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                }
-              ]
+              "title": "Council Tax feb",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "ctax"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Transportation",
+          "date": "",
+          "key": "transport",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Fuel",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
             },
             {
-              "id": 3,
-              "title": "Insurance",
-              "date": "",
-              "key": "debt",
-              "groupItems": [
-                {
-                  "id": 0,
-                  "title": "Health Insurance",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "fuel"
-                },
-                {
-                  "id": 1,
-                  "title": "Homeowner/Renter",
-                  "planned": 0,
-                  "remaining": 0,
-                  "spent": 0,
-                  "key": "tfl"
-                }
-              ]
+              "id": 1,
+              "title": "TFL",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
+            },
+            {
+              "id": 2,
+              "title": "Parking",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "parking"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Lifestyle",
+          "date": "",
+          "key": "lifestyle",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Entertainment",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
+            },
+            {
+              "id": 1,
+              "title": "Miscellaneous",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Debt",
+          "date": "",
+          "key": "debt",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Entertainment",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
+            },
+            {
+              "id": 1,
+              "title": "Miscellaneous",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Insurance",
+          "date": "",
+          "key": "debt",
+          "groupItems": [
+            {
+              "id": 0,
+              "title": "Health Insurance",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "fuel"
+            },
+            {
+              "id": 1,
+              "title": "Homeowner/Renter",
+              "planned": 0,
+              "remaining": 0,
+              "spent": 0,
+              "key": "tfl"
             }
           ]
         }
       ]
     },
     {
-      "mar": [
-        {}
-      ]
+      "mar": []
     },
     {
-      "apr": [
-        {}
-      ]
+      "apr": []
     },
     {
-      "may": [
-        {}
-      ]
+      "may": []
     },
     {
-      "june": [
-        {}
-      ]
+      "jun": []
     },
     {
-      "jul": [
-        {}
-      ]
+      "jul": []
     },
     {
-      "aug": [
-        {}
-      ]
+      "aug": []
     },
     {
-      "sep": [
-        {}
-      ]
+      "sep": []
     },
     {
-      "oct": [
-        {}
-      ]
+      "oct": []
     },
     {
-      "nov": [
-        {}
-      ]
+      "nov": []
     },
     {
-      "dec": [
-        {}
-      ]
+      "dec": []
     }
-  ],
+  ]
 }

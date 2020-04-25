@@ -7,26 +7,29 @@ const BudgetPage = (props) => {
   const [groupData, setGroupData] = useState({});
   
   useEffect(() => {
-    fetch("http://localhost:3004/month/jan/group")
-    .then((res) => res.json())
-    .then((result) => {
-      console.log('res: ', result);
-      setIsLoaded(true)
-      setGroupData(result);
-    }, (error) => {
-      setIsLoaded(true)
-      console.log(error);
-    })
-  }, []);
+    const { match: {params : { month}}} = props
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:3000/month");
+      const data = await response.json();
+      data.forEach(dataItem => {
+        if (dataItem[month]) {
+          setIsLoaded(Array.isArray(dataItem[month]) && dataItem[month].length > 0)
+          setGroupData(dataItem);
+        }
+      });
+    };
+
+    fetchData();
+  }, [])
+
+  const monthRoute = props.match.params.month;
   let returnValue = ( <div>...Loading</div>)
   if ( isLoaded) {
-    console.log('groupData[0]: ', groupData[0]);
-    const {title, groupItems} = groupData[0];
-    // console.log(title, groupItems)
+
     returnValue = (
       <>
         <h1>{props.match.params.month} Budget</h1>
-        <GroupBlock title={title} groupItems={groupItems}/>
+        <GroupBlock {...groupData[monthRoute]}/>
         <TransactionBlock />
       </>
     );

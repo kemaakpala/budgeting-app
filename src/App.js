@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Layout from './Containers/Layout';
 import BudgetPage from './Containers/BudgetPage';
 import './App.css';
@@ -10,6 +10,7 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/:month" component={BudgetPage}/>
+          <Redirect to="/jan" />
         </Switch>
       </Layout>
     </div>
