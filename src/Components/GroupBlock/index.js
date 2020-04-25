@@ -1,5 +1,9 @@
 import React from 'react'
-import GroupBlockItem from './GroupBlockItem/'
+import GroupBlockItem from './GroupBlockItem'
+import Box from '../Box'
+import Divider from '../Divider'
+import Typography from '../Typography'
+
 
 const GroupBlock = (props) => {
   const groupObj = props;
@@ -12,7 +16,9 @@ const GroupBlock = (props) => {
       // Just to clarify: unlike object destructuring, the parameter names don't matter here.
       return (
         <>
-          <div className="group-block">{value.title}</div>
+        <Box>
+          <div className="group-block"><Typography component="h2">{value.title}</Typography></div>
+          <Divider />
           <div className="group-block-body">
             <ul>
               <li>
@@ -23,6 +29,7 @@ const GroupBlock = (props) => {
               </li>
             </ul>
           </div>
+        </Box>
         </>
       )
     }) : null

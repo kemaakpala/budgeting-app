@@ -1,5 +1,7 @@
 import React from 'react';
 import './GroupBlockItem.css'
+import Typography from '../../Typography'
+import Divider from '../../Divider'
 
 const GroupBlockItem = (props) => {
   const { title, planned, spent, remaining } = props;
@@ -7,16 +9,17 @@ const GroupBlockItem = (props) => {
     <>
       <ul className='itemRow'>
         <li>
-          {title}
+          <Typography component="p">{title}</Typography>
         </li>
         <li>
-          Planned: {planned}
+          <Typography component="p">Planned: {planned}</Typography>
         </li>
         <li>
-          Spent / Remaining : {spent} / {remaining}
+        <Typography component="p"> Spent / Remaining : {spent} / {remaining}</Typography>
         </li>
 
       </ul>
+      <Divider />
     </>
   )
 }

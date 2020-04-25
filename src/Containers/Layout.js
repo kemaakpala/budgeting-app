@@ -1,12 +1,7 @@
 import React from 'react';
+import './Layout.css';
 const Layout = (props) => {
-  return (
-    <>
-      <header>this is the header</header>
-      <main>{props.children}</main>
-      <footer> this is the footer</footer>
-    </>
-  );
+  return <main>{props.children}</main>
 }
 
 export default Layout;
