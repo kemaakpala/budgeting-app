@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import GroupBlock from '../Components/GroupBlock';
 import TransactionBlock from '../Components/TransactionBlock';
 import Typography from '../Components/Typography';
+import './BudgetPage.css';
+import Button from '../Components/Button/Button';
 
 const BudgetPage = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,7 +32,8 @@ const BudgetPage = (props) => {
     returnValue = (
       <>
         <Typography component="h1">{props.match.params.month} Budget</Typography>
-        <GroupBlock {...groupData[monthRoute]}/>
+        <Button><i class="fas fa-plus"></i></Button>
+        <div className="blockWrapper"><GroupBlock {...groupData[monthRoute]}/></div>
         <TransactionBlock />
       </>
     );
