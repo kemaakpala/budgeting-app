@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import GroupBlock from '../Components/GroupBlock';
 import TransactionBlock from '../Components/TransactionBlock';
 import Typography from '../Components/Typography';
-import './BudgetPage.css';
 import Button from '../Components/Button/Button';
+import MonthUtil from '../utils/month';
+import './BudgetPage.css';
 
 const BudgetPage = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -31,9 +34,13 @@ const BudgetPage = (props) => {
 
     returnValue = (
       <>
-        <Typography component="h1">{props.match.params.month} Budget</Typography>
-        <Button><i class="fas fa-plus"></i></Button>
-        <div className="blockWrapper"><GroupBlock {...groupData[monthRoute]}/></div>
+        <div className="blockWrapper">
+          <Typography component="h1">{MonthUtil(monthRoute)} Budget</Typography>
+          <Button title="add transaction"><FontAwesomeIcon icon={faPlus}/></Button>
+        </div>
+        <div className="blockWrapper flex-direction-column">
+          <GroupBlock {...groupData[monthRoute]}/>
+        </div>
         <TransactionBlock />
       </>
     );

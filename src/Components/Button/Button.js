@@ -1,4 +1,4 @@
 import React from 'react';
 import './Button.css';
 
-export default (props) => <button>{props.children}</button>
+export default (props) => <button className="btn rounded" title={props.title}>{props.children}</button>

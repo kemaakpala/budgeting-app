@@ -1,8 +1,10 @@
 .box {
-  padding:10px;
-  background-color: #033649;
+  padding: 10px;
+  background-color: #CDB380;
   /* min-width: 50%; */
-  border: 1px solid #031634;
+  /* border: 1px solid #033649; */
+  color: #033649;
   border-radius: 8px;
   margin-bottom: 1rem;
+  box-shadow: 0px 4px rgba(205, 179, 128, 0.69);
 }

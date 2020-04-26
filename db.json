@@ -10,7 +10,7 @@
           "groupItems": [
             {
               "id": 0,
-              "title": "Mortgage/Rent jan",
+              "title": "Mortgage/Rent",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -18,7 +18,7 @@
             },
             {
               "id": 1,
-              "title": "Gas jan",
+              "title": "Gas",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -26,7 +26,7 @@
             },
             {
               "id": 2,
-              "title": "Electricity jan",
+              "title": "Electricity",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -34,7 +34,7 @@
             },
             {
               "id": 3,
-              "title": "Council Tax jan",
+              "title": "Council Tax",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -44,13 +44,13 @@
         },
         {
           "id": 1,
-          "title": "Transportation jan",
+          "title": "Transportation",
           "date": "",
           "key": "transport",
           "groupItems": [
             {
               "id": 0,
-              "title": "Fuel jan",
+              "title": "Fuel",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -58,7 +58,7 @@
             },
             {
               "id": 1,
-              "title": "TFL jan",
+              "title": "TFL",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -66,7 +66,7 @@
             },
             {
               "id": 2,
-              "title": "Parking jan",
+              "title": "Parking",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -152,13 +152,13 @@
       "feb": [
         {
           "id": 0,
-          "title": "Housing feb",
+          "title": "Housing",
           "date": "",
           "key": "housing",
           "groupItems": [
             {
               "id": 0,
-              "title": "Mortgage/Rent feb",
+              "title": "Mortgage/Rent",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -166,7 +166,7 @@
             },
             {
               "id": 1,
-              "title": "Gas feb",
+              "title": "Gas",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -174,7 +174,7 @@
             },
             {
               "id": 2,
-              "title": "Electricity feb",
+              "title": "Electricity",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
@@ -182,7 +182,7 @@
             },
             {
               "id": 3,
-              "title": "Council Tax feb",
+              "title": "Council Tax",
               "planned": 0,
               "remaining": 0,
               "spent": 0,
