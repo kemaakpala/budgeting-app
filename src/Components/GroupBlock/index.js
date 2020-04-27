@@ -17,7 +17,7 @@ const GroupBlock = (props) => {
       return (
         <>
         <Box>
-          <div className="group-block"><Typography component="h2">{value.title}</Typography></div>
+          <div key={key} className="group-block"><Typography component="h2">{value.title}</Typography></div>
           <Divider />
           <div className="group-block-body">
             <ul>

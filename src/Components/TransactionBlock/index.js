@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import TextInputs from '../Inputs/TextInput'
+
 
 const TransactionBlock = () => {
   const amount = useInput(0);
@@ -20,9 +22,10 @@ const TransactionBlock = () => {
 
   return (
     <>
-      <form>
+      {/* <form> */}
         <label htmlFor="Amount">Amount </label>
         <input id="Amount" type="text" value={amount.value} onChange={amount.onChange} />
+        {/* <TextInputs id="Amount" variant="text" value={amount.value} onChange={amount.onChange} /> */}
         <br />
         <label htmlFor="Group">Group {group.value}</label>
         <select id="Group" value={group.value} onChange={group.onChange}>
@@ -35,7 +38,7 @@ const TransactionBlock = () => {
           <option value="0" >Select a group item</option>
           <option value="1" >item 1</option>
         </select>
-      </form>
+      {/* </form> */}
     </>
   );
 }

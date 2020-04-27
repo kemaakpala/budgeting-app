@@ -36,12 +36,14 @@ const BudgetPage = (props) => {
       <>
         <div className="blockWrapper">
           <Typography component="h1">{MonthUtil(monthRoute)} Budget</Typography>
-          <Button title="add transaction"><FontAwesomeIcon icon={faPlus}/></Button>
+          <Button variant="rounded" className="alignLeft" title="add transaction"><FontAwesomeIcon icon={faPlus}/></Button>
         </div>
         <div className="blockWrapper flex-direction-column">
           <GroupBlock {...groupData[monthRoute]}/>
         </div>
-        <TransactionBlock />
+        <div className="blockWrapper">
+          <TransactionBlock />
+        </div>
       </>
     );
   }
