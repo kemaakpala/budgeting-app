@@ -41,7 +41,7 @@ const BudgetPage = (props) => {
         <div className="blockWrapper flex-direction-column">
           <GroupBlock {...groupData[monthRoute]}/>
         </div>
-        <div className="blockWrapper">
+        <div className="blockWrapper flex-direction-column">
           <TransactionBlock />
         </div>
       </>

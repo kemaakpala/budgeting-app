@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextInputs from '../Inputs/TextInput'
-
+import SelectInput from '../Inputs/SelectInput';
+import Box from '../Box'
 
 const TransactionBlock = () => {
   const amount = useInput(0);
@@ -22,25 +23,39 @@ const TransactionBlock = () => {
 
   return (
     <>
-      {/* <form> */}
-        <label htmlFor="Amount">Amount </label>
-        <input id="Amount" type="text" value={amount.value} onChange={amount.onChange} />
-        {/* <TextInputs id="Amount" variant="text" value={amount.value} onChange={amount.onChange} /> */}
+      <Box header="Transactions">
+        <TextInputs
+          id="Amount"
+          variant="text"
+          label="Amount"
+          value={amount.value}
+          changed={(e) => amount.onChange(e)}
+        />
         <br />
-        <label htmlFor="Group">Group {group.value}</label>
-        <select id="Group" value={group.value} onChange={group.onChange}>
-          <option value="0" >Select a group</option>
-          <option value="1" >Housing </option>
-        </select>
+        <SelectInput
+          id="Group"
+          label="Group"
+          value={group.value}
+          changed={(e) => group.onChange(e)}
+          options={[
+            {key: "0", value: "default", label: "select a group"},
+            {key: "1", value: "Housing", label: "Housing"}
+          ]}
+        />
         <br />
-        <label htmlFor="GroupItem">Group Item {groupItem.value}</label>
-        <select id="GroupItem" value={groupItem.value} onChange={groupItem.onChange}>
-          <option value="0" >Select a group item</option>
-          <option value="1" >item 1</option>
-        </select>
-      {/* </form> */}
+        <SelectInput
+          id="GroupItem"
+          label="Group Item"
+          value={groupItem.value}
+          changed={(e) => groupItem.onChange(e)}
+          options={[
+            {key: "0", value: "default", label: "select a group item"},
+            {key: "1", value: "item 1", label: "item 1"}
+          ]}
+        />
+      </Box>
     </>
   );
 }
 
-export default TransactionBlock;
+export default TransactionBlock
