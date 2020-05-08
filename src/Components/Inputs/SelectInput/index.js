@@ -2,7 +2,8 @@ import React from 'react'
 
 export default ({ id, variant, label, value, changed, options}) => (
   <>
-    <label htmlFor={id}>{label}</label>
+    
+    {typeof label=== 'undefined' ? null : <label htmlFor={id}>{label}</label>}
     <select id={id} value={value} onChange={changed}>
       {
         options.map(({key, value, label}) => (

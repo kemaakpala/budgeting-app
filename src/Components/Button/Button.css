@@ -16,3 +16,7 @@
 .btn.rounded {
   border-radius: 50%;
 }
+
+.btn.roundedCorners {
+  border-radius: 1rem;
+}

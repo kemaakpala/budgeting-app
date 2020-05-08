@@ -31,12 +31,11 @@ const BudgetPage = (props) => {
   const monthRoute = props.match.params.month;
   let returnValue = ( <div>...Loading</div>)
   if ( isLoaded) {
-
     returnValue = (
       <>
         <div className="blockWrapper">
           <Typography component="h1">{MonthUtil(monthRoute)} Budget</Typography>
-          <Button variant="rounded" className="alignLeft" title="add transaction"><FontAwesomeIcon icon={faPlus}/></Button>
+          <Button variant="roundedCorners" className="alignLeft" title="add transaction"><FontAwesomeIcon icon={faPlus}/></Button>
         </div>
         <div className="blockWrapper flex-direction-column">
           <GroupBlock {...groupData[monthRoute]}/>
