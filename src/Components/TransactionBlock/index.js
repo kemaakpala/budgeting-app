@@ -23,7 +23,7 @@ const TransactionBlock = () => {
 
   return (
     <>
-      <Modal header="Transactions">
+      <Modal header="Transactions" closed>
         <TextInputs
           id="Amount"
           variant="text"

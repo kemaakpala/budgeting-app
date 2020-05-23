@@ -6,7 +6,10 @@ import Button from '../Button/Button'
 import './Modal.css';
 
 const Modal = (props) => {
-  const { children, header } = props;
+  const { children, header, closed } = props;
+  if (closed) {
+    return null;
+  }
   return (
     <>
       <div className='modal-back-drop'>
