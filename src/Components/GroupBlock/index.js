@@ -12,8 +12,6 @@ const GroupBlock = (props) => {
     return groupArr.length ? groupArr.map(([key, value]) => {
       // Pretty straightforward - use key for the key and value for the value.
       // Just to clarify: unlike object destructuring, the parameter names don't matter here.
-
-      console.log(key, value.id)
       return (
         <>
         <Box key={value.id} header={value.title}>          

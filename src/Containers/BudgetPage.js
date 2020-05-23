@@ -1,54 +1,67 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import GroupBlock from '../Components/GroupBlock';
 import TransactionBlock from '../Components/TransactionBlock';
 import Typography from '../Components/Typography';
 import Button from '../Components/Button/Button';
 import MonthUtil from '../utils/month';
+import { fetchBudget } from '../store/actions'
 import './BudgetPage.css';
 
 const BudgetPage = (props) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [groupData, setGroupData] = useState({});
-  
   useEffect(() => {
-    const { match: {params : { month}}} = props
-    const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/month");
-      const data = await response.json();
-      data.forEach(dataItem => {
-        if (dataItem[month]) {
-          setIsLoaded(Array.isArray(dataItem[month]) && dataItem[month].length > 0)
-          setGroupData(dataItem);
-        }
-      });
-    };
-
-    fetchData();
+    const { onFetchBudget } = props;
+    onFetchBudget();
   }, [])
 
+  const isLoading = props.budget.loading;
+  const { data } = props.budget;
+
   const monthRoute = props.match.params.month;
-  let returnValue = ( <div>...Loading</div>)
-  if ( isLoaded) {
-    returnValue = (
-      <>
-        <div className="blockWrapper">
-          <Typography component="h1">{MonthUtil(monthRoute)} Budget</Typography>
-          <Button variant="roundedCorners" className="alignLeft" title="add transaction"><FontAwesomeIcon icon={faPlus}/></Button>
-        </div>
-        <div className="blockWrapper flex-direction-column">
-          <GroupBlock {...groupData[monthRoute]}/>
-        </div>
-        <div className="blockWrapper flex-direction-column modal">
-          <TransactionBlock />
-        </div>
-      </>
-    );
+
+  let returnValue = (<div>...Loading</div>)
+  if (!isLoading) {
+    data.forEach(dataItem => {
+      if (dataItem[monthRoute]) {
+        returnValue = (
+          <>
+            <div className="blockWrapper">
+              <Typography component="h1">{MonthUtil(monthRoute)} Budget</Typography>
+              <Button variant="roundedCorners" className="alignLeft" title="add transaction"><FontAwesomeIcon icon={faPlus} /></Button>
+            </div>
+            <div className="blockWrapper flex-direction-column">
+              <GroupBlock {...dataItem[monthRoute]} />
+            </div>
+            <div className="blockWrapper flex-direction-column">
+              {/* <div className="modal-back-drop"> */}
+                {/* <div className="modal"> */}
+                  {/* <Button variant="roundedCorners" className="alignLeft" ><FontAwesomeIcon icon={faTimes} /></Button> */}
+                  <TransactionBlock />
+                {/* </div> */}
+              {/* </div> */}
+            </div>
+          </>
+        );
+      }
+    })
+
   }
 
   return returnValue
-  
+
 }
 
-export default BudgetPage;
+const mapDispatchToProps = dispatch => {
+  return {
+    onFetchBudget: () => dispatch(fetchBudget())
+  }
+}
+const mapStateToProps = state => {
+  return {
+    ...state
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BudgetPage);

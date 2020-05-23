@@ -11,13 +11,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import budgetReducer from './store/reducer/budget';
 import transactionReducer from './store/reducer/transaction';
+let middleWares = [thunk];
+if (process.env.NODE_ENV === `development`) {
+  const { logger } = require(`redux-logger`);
+  middleWares.push(logger);
+}
+const rootReducer = combineReducers({budget: budgetReducer, transaction: transactionReducer});
 
-const composeEnhancers = process.env.NODE_ENV === "development" ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: null || compose;
-const rootReducer = combineReducers(budgetReducer, transactionReducer, composeEnhancers(
-  applyMiddleware(thunk)
-));
+const store = createStore(rootReducer,  applyMiddleware(...middleWares));
 
-const store = createStore(rootReducer);
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

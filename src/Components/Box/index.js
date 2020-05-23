@@ -4,11 +4,12 @@ import Typography from '../Typography'
 import './Box.css'
 
 export default (props) => {
-  const {children, header, footer} = props;
+  const {children, header, footer, className, close: CloseButton} = props;
+
   return (
-    <div className="box">
+    <div className={`box ${className}`}>
       { header 
-          ? <div className="box-header"><Typography component="h2">{header}</Typography></div>
+          ? <div className="box-header"><Typography component="h2">{header}</Typography> {props.close && <CloseButton />}</div>
           : null
       }
       <Divider />

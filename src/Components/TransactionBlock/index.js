@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextInputs from '../Inputs/TextInput'
 import SelectInput from '../Inputs/SelectInput';
-import Box from '../Box'
+import Modal from '../Modal/Modal'
 
 const TransactionBlock = () => {
   const amount = useInput(0);
@@ -23,7 +23,7 @@ const TransactionBlock = () => {
 
   return (
     <>
-      <Box header="Transactions">
+      <Modal header="Transactions">
         <TextInputs
           id="Amount"
           variant="text"
@@ -53,7 +53,7 @@ const TransactionBlock = () => {
             {key: "1", value: "item 1", label: "item 1"}
           ]}
         />
-      </Box>
+      </Modal>
     </>
   );
 }

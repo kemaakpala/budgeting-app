@@ -1,7 +1,7 @@
 
 import { FETCH_BUDGET_SUCCESS, FETCH_BUDGET_FAILED, FETCH_BUDGET_START } from './actionTypes';
 
-export const budgetStart = () => { type: FETCH_BUDGET_START }
+export const budgetStart = () => ({ type: FETCH_BUDGET_START })
 export const fetchBudgetSuccess = (data) => ({
   type: FETCH_BUDGET_SUCCESS,
   data,
@@ -12,9 +12,9 @@ export const fetchBudgetFailed = (error) => ({
 })
 
 export const fetchBudget = () => {
-  return dispatch => {
+  return  (dispatch) => {
     dispatch(budgetStart());
-    fetch("http://localhost:3000/month")
+    return fetch("http://localhost:3000/month")
       .then(response => response.json())
       .then(data => {
         dispatch(fetchBudgetSuccess(data))

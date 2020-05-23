@@ -1,10 +1,10 @@
 
 import { FETCH_BUDGET_SUCCESS, FETCH_BUDGET_FAILED, FETCH_BUDGET_START } from '../actions/actionTypes';
 
-const budgetReducer = (state = { loading: false, error: null }, action) => { 
+const budgetReducer = (state = { loading: true, error: null }, action) => { 
   switch (action.type) {
     case FETCH_BUDGET_START:
-      return { loading: true }
+      return state;
     case FETCH_BUDGET_SUCCESS:
         return {
           ...state,
