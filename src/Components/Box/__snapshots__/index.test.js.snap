@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> it should render a snapshot with box body and className 1`] = `
+<div
+  class="box testClass"
+>
+  <hr
+    class="divider"
+  />
+  <div
+    class="box-body"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`<Box /> it should render a snapshot with box body, className, footer 1`] = `
+<div
+  class="box testClass"
+>
+  <hr
+    class="divider"
+  />
+  <div
+    class="box-body"
+  >
+    test
+  </div>
+  <div
+    class="box-footer"
+  >
+    testFooter
+  </div>
+</div>
+`;
+
+exports[`<Box /> it should render a snapshot with box body, className, header 1`] = `
+<div
+  class="box testClass"
+>
+  <div
+    class="box-header"
+  >
+    <h2>
+       
+      testHeader
+       
+    </h2>
+     
+  </div>
+  <hr
+    class="divider"
+  />
+  <div
+    class="box-body"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`<Box /> it should render a snapshot with box header, body, className, footer 1`] = `
+<div
+  class="box testClass"
+>
+  <div
+    class="box-header"
+  >
+    <h2>
+       
+      testHeader
+       
+    </h2>
+     
+  </div>
+  <hr
+    class="divider"
+  />
+  <div
+    class="box-body"
+  >
+    test
+  </div>
+  <div
+    class="box-footer"
+  >
+    testFooter
+  </div>
+</div>
+`;

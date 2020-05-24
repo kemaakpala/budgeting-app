@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
-import GroupBlock from '../Components/GroupBlock';
-import TransactionBlock from '../Components/TransactionBlock';
-import Typography from '../Components/Typography';
-import Button from '../Components/Button/Button';
-import MonthUtil from '../utils/month';
-import { fetchBudget } from '../store/actions'
+import GroupBlock from '../../Components/GroupBlock';
+import TransactionBlock from '../../Components/TransactionBlock';
+import Typography from '../../Components/Typography';
+import Button from '../../Components/Button/Button';
+import MonthUtil from '../../utils/month';
+import { fetchBudget } from '../../store/actions'
 import './BudgetPage.css';
 
 const BudgetPage = (props) => {
